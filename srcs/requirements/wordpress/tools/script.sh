@@ -26,10 +26,10 @@ cd "$WORDPRESS_DIR"
 
 echo "${GREEN}Creando wp-config.php dinámicamente...${NC}"
 wp config create \
-    --dbname="$DB_NAME" \
-    --dbuser="$DB_USER" \
-    --dbpass="$DB_PASSWORD" \
-#    --dbhost="$DB_HOST" \
+    --dbname="$database_name" \
+    --dbuser="$mysql_user" \
+    --dbpass="$mysql_password" \
+    --dbhost="$database_host" \
     --allow-root
 
 # Establecer el límite de memoria
