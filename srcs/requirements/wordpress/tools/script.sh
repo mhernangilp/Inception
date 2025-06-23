@@ -52,7 +52,7 @@ wp core install \
     --allow-root
 
 echo "${GREEN}Creando usuario adicional...${NC}"
-wp user create "$DB_USER" "$DB_EMAIL" --role=author --user_pass="$DB_PASSWORD" --allow-root
+wp user create "$mysql_user" "$mysql_email" --role=author --user_pass="$mysql_password" --allow-root
 
 echo "${GREEN}Ajustando permisos...${NC}"
 chown -R www-data:www-data "$WORDPRESS_DIR"
