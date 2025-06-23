@@ -15,11 +15,10 @@ COPY ./tools/script.sh /script.sh
 
 RUN chmod +x /script.sh
 
-RUN PHP_VERSION=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;') && \
-    sed -i 's|listen = /run/php/php.*-fpm.sock|listen = 9000|' /etc/php/$PHP_VERSION/fpm/pool.d/www.conf
+RUN sed -i 's|listen = /run/php/php7.4-fpm.sock|listen = 9000|' /etc/php/7.4/fpm/pool.d/www.conf
 
 EXPOSE 9000
 
 ENTRYPOINT ["sh", "/script.sh"]
 
-CMD ["php-fpm", "-F"]
+CMD ["php-fpm7.4", "-F"]
