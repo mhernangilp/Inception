@@ -45,12 +45,12 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/mhernangilp/data/mariadb
+      device: /home/mhernang/data/mariadb
       o: bind
       
   wordpress:
     driver: local
     driver_opts:
       type: none
-      device: /home/mhernangilp/data/wordpress
+      device: /home/mhernang/data/wordpress
       o: bind

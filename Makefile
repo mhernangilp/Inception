@@ -21,10 +21,10 @@ clean:
 			sudo docker rm $$container 2>/dev/null || true; \
 		fi; \
 	done
-	sudo docker rmi srcs_nginx srcs_wordpress srcs_mariadb 2>/dev/null || true
+	@sudo docker rmi srcs_nginx srcs_wordpress srcs_mariadb 2>/dev/null || true
 
 fclean: clean
-	@sudo rm -rf /home/mhernangilp/data/wordpress/* /home/mhernangilp/data/mariadb/* /home/mhernangilp/data/mariadb/.db_configured 2>/dev/null || true
+	@sudo rm -rf /home/mhernang/data/wordpress/* /home/mhernang/data/mariadb/* /home/mhernang/data/mariadb/.db_configured 2>/dev/null || true
 	@sudo docker volume rm srcs_mariadb srcs_wordpress 2>/dev/null || true
 
 .PHONY: volumes all up down re clean fclean
