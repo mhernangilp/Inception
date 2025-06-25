@@ -23,11 +23,6 @@ wp config create \
 
 wp config set WP_MEMORY_LIMIT '256M' --type=constant --allow-root
 
-sed -i "/require_once ABSPATH . 'wp-settings.php';/i \
-define( 'WP_DEBUG', true );\n\
-define( 'WP_DEBUG_LOG', true );\n\
-define( 'WP_DEBUG_DISPLAY', true );" "$WORDPRESS_DIR/wp-config.php"
-
 wp core install \
     --url="$DOMAIN_NAME" \
     --title="$WP_TITLE" \
