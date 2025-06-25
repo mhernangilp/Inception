@@ -21,7 +21,6 @@ clean:
 			sudo docker rm $$container 2>/dev/null || true; \
 		fi; \
 	done
-	@echo "$(RED)Removing images$(NC)"
 	sudo docker rmi srcs_nginx srcs_wordpress srcs_mariadb 2>/dev/null || true
 
 fclean: clean
