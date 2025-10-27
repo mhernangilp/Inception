@@ -17,7 +17,7 @@
 ---
 
 <p align="center">
-	<img width="600" alt="screenshot" src="https://github.com/mhernangilp/minishell/assets/123759990/7a75ff01-4305-44d8-9d0b-ad66d897e627">
+	<img width="500" alt="screenshot" src="https://github.com/user-attachments/assets/96129417-23a7-44db-a846-2b90a2361f60">
 </p>
 
 ## 💡 About the project
